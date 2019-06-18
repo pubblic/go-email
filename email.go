@@ -46,14 +46,6 @@ func (b *HeaderBuilder) Build() mail.Header {
 	return h
 }
 
-func getAddressList(list []*mail.Address) []string {
-	addressList := make([]string, len(list))
-	for i, mailbox := range list {
-		addressList[i] = mailbox.Address
-	}
-	return addressList
-}
-
 func stringMailboxList(list []*mail.Address) string {
 	var buf strings.Builder
 	for i, addr := range list {
