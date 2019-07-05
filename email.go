@@ -23,7 +23,7 @@ type HeaderBuilder struct {
 	Header      mail.Header
 }
 
-func (b *HeaderBuilder) Build() mail.Header {
+func (b HeaderBuilder) Build() mail.Header {
 	const e = 5
 	h := make(mail.Header, len(b.Header)+e)
 	for key, val := range b.Header {
