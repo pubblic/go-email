@@ -26,7 +26,7 @@ func connect(a *Auth, server, serverTls string) (*smtp.Client, error) {
 		identity,
 		a.Username,
 		a.Password,
-		GOOGLE_SMTP,
+		server,
 	))
 	if err != nil {
 		c.Close()
